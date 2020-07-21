@@ -7,8 +7,9 @@ import "strings"
 const pathListSeparator = string(os.PathListSeparator)
 
 type Entry interface {
-	// className: fully/qualified/ClassName.class
+	// 寻找加载class文件
 	readClass(className string) ([]byte, Entry, error)
+	// 相当于java的toString()
 	String() string
 }
 
