@@ -32,7 +32,7 @@ func (self *ClassReader) readUint64() uint64 {
 	self.data = self.data[8:]
 	return val
 }
-
+//读取2字节数据【表】。【表】的概念类似于Java的数组。
 func (self *ClassReader) readUint16s() []uint16 {
 	n := self.readUint16()
 	s := make([]uint16, n)
