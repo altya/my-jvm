@@ -25,7 +25,7 @@ type MemberInfo struct {
 	attributes      []AttributeInfo
 }
 
-// 读取成员变量或者成员方法
+
 func readMembers(reader *ClassReader, cp ConstantPool) []*MemberInfo {
 	memberCount := reader.readUint16()
 	members := make([]*MemberInfo, memberCount)

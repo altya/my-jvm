@@ -8,6 +8,7 @@ CONSTANT_Integer_info {
     u4 bytes;
 }
 */
+// 4字节整数，比int小的也放在其中。
 type ConstantIntegerInfo struct {
 	val int32
 }
@@ -26,6 +27,7 @@ CONSTANT_Float_info {
     u4 bytes;
 }
 */
+// 使用4字节存储单精度浮点数。
 type ConstantFloatInfo struct {
 	val float32
 }
@@ -45,6 +47,7 @@ CONSTANT_Long_info {
     u4 low_bytes;
 }
 */
+// 使用8字节存储整数常量。
 type ConstantLongInfo struct {
 	val int64
 }
@@ -64,6 +67,7 @@ CONSTANT_Double_info {
     u4 low_bytes;
 }
 */
+//使用8字节存储双精度浮点型
 type ConstantDoubleInfo struct {
 	val float64
 }
