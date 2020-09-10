@@ -8,8 +8,11 @@ import "os"
 type Cmd struct {
 	helpFlag    bool
 	versionFlag bool
+	// classpath
 	cpOption    string
+	// Jre目录  
 	XjreOption  string
+	// 需要解析的类
 	class       string
 	args        []string
 }

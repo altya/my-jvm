@@ -17,11 +17,13 @@ func main() {
 
 
 func startJVM(cmd *Cmd) {
+	// 使用jre解析启动类路径和扩展类路径，使用cp解析用户类路径
 	cp := classpath.Parse(cmd.XjreOption, cmd.cpOption)
 	fmt.Printf("classpath:%v class:%v args:%v\n",
 		cp, cmd.class, cmd.args)
 
 	className := strings.Replace(cmd.class, ".", "/", -1)
+	// 读取class文件数据
 	classData, _, err := cp.ReadClass(className)
 	if err != nil {
 		fmt.Printf("Could not find or load main class %s\n", cmd.class)
